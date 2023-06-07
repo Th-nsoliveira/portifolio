@@ -71,6 +71,7 @@ header .container{
     display: flex;
     align-items: center;
     height: 100vh;  
+    
 }
 
 .hero .container{
@@ -172,6 +173,10 @@ header .container{
     padding-bottom: 224px;
 }
 
+.sobremim h2{
+    font-size: 35px;
+}
+
 .txtsobre{
     max-width: 660px;
 }
@@ -181,13 +186,15 @@ h3{
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 16px;
+    z-index: 2;
 }
 
 h2{ 
-    font-size: 36px;
+    font-size: 50px;
     font-weight: 700;
     color: #00abf0;
     margin-bottom: 16px;
+    
 }
 
 p{
@@ -197,9 +204,10 @@ p{
 
 }
 
+
 .txttitle{
     text-align: center;
-    padding-bottom: 35px;
+    padding-bottom: 100px;
 }
 
 .itens{
@@ -210,7 +218,7 @@ p{
     /* max-width: 800px; */
     flex-wrap: wrap;
     margin-top: 60px;
-    padding-bottom: 180px;
+    padding-bottom: 200px;
 }
 
 .itens h3{
@@ -228,17 +236,108 @@ p{
 }
 
 .box{
+    position: relative;
     background-color: black;
-    border-radius: 20px;
-    width: 180px;
+    width: 250px;
     padding:40px 0;
-    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin-bottom: 65px;
+    border-radius: 20px;
+    overflow:hidden;
+    text-align: center;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+    animation: animate 4s linear infinite;
+    
+}
+.box::after{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;   
+}
+
+.one::before{
+    background-image:conic-gradient(transparent,transparent,transparent,rgb(252, 69, 3));
+}
+.one::after{
+    background-image:conic-gradient(transparent,transparent,transparent,rgb(252, 69, 3));
+}
+
+
+.two::before{
+    background-image:conic-gradient(transparent,transparent,transparent,rgb(3, 40, 252));
+}
+.two::after{
+    background-image:conic-gradient(transparent,transparent,transparent,rgb(3, 40, 252));
+}
+
+
+.three::before{
+    background-image:conic-gradient(transparent,transparent,transparent,rgb(254, 254, 1));
+}
+.three::after{
+    background-image:conic-gradient(transparent,transparent,transparent,rgb(254, 254, 1));
+}
+
+
+.four::before{
+    background-image:conic-gradient(transparent,transparent,transparent,#563d7c);
+}
+.four::after{
+    background-image:conic-gradient(transparent,transparent,transparent,#563d7c);
+}
+
+
+.five::before{
+    background-image:conic-gradient(transparent,transparent,transparent,#bf4080);
+}
+.five::after{
+    background-image:conic-gradient(transparent,transparent,transparent,#bf4080);
+}
+
+
+.six::before{
+    background-image:conic-gradient(transparent,transparent,transparent,white);
+}
+.six::after{
+    background-image:conic-gradient(transparent,transparent,transparent,white);
+}
+
+@keyframes animate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .box img{
     width: 60px;
     height: 60px;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+
+.box span{
+   position: absolute; 
+   inset: 5px;
+   background: rgb(12, 11, 14);
+   border-radius: 20px;
+   z-index: 1;
 }
 
 
@@ -256,6 +355,7 @@ p{
     }
     
 }
+
 
 
 
