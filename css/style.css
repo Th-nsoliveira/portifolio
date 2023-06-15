@@ -169,8 +169,7 @@ header .container{
 .sobremim{ 
     display: flex;
     justify-content: space-between;
-    padding-top: 100px;
-    padding-bottom: 224px;
+    padding-bottom: 100px;
 }
 
 .sobremim h2{
@@ -190,7 +189,7 @@ h3{
 }
 
 h2{ 
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     color: #00abf0;
     margin-bottom: 16px;
@@ -217,8 +216,7 @@ p{
     column-gap: 200px;
     /* max-width: 800px; */
     flex-wrap: wrap;
-    margin-top: 60px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 
 .itens h3{
@@ -310,10 +308,10 @@ p{
 
 
 .six::before{
-    background-image:conic-gradient(transparent,transparent,transparent,white);
+    background-image:conic-gradient(transparent,transparent,transparent,rgb(94, 158, 94));
 }
 .six::after{
-    background-image:conic-gradient(transparent,transparent,transparent,white);
+    background-image:conic-gradient(transparent,transparent,transparent,rgb(94, 158, 94));
 }
 
 @keyframes animate{
