@@ -1,16 +1,18 @@
  var bgimagem=document.querySelector('.bg-img')
- var proj= document.querySelector('.projetos')
+ var proj= document.querySelectorAll('.projetos') //lista
 
- document.querySelectorAll('.projetos').forEach(function(){
 
-    proj.addEventListener('mouseover', function(){
-        bgimagem.classList.add('cover');  
-    });
-   
-    proj.addEventListener('mouseleave', function(){
-        bgimagem.classList.remove('cover');  
-    });
-   
+ //console.log(proj);
+
+ proj.forEach((item) => {
+    
+    item.addEventListener('mouseenter', function(){        
+        //console.log(item);
+        //item.classList.add('ativo');
+    })
+
  })
+
+
 
 
