@@ -387,8 +387,8 @@ p{
 
 .bg-img{
     position: absolute; 
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
  }
 
@@ -397,8 +397,8 @@ p{
 }
 
 .projetos img{
-    max-width: 100%;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     display: block; 
 }
 
@@ -442,6 +442,9 @@ p{
     height: 32px; 
 }
 
+.icones img:hover{
+    opacity: 0.5;
+}
 
 
 
