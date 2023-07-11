@@ -357,7 +357,7 @@ p{
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-between;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 
 .projetos{
@@ -444,6 +444,107 @@ p{
 
 .icones img:hover{
     opacity: 0.5;
+}
+
+.contato .txttitle{
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.contato{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contato p{
+    text-align: left;
+    font-size: 18px;
+    max-width: 620px;
+    color: #ededed;
+    margin-bottom: 70px;
+}
+
+.entre-contato{
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 32px; 
+    border: 2px solid #00abf0;
+    border-radius: 15px;
+    color: #00abf0;
+    background-color: transparent;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.entre-contato:hover{
+    color:#081b29;
+}
+
+.entre-contato::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    background-color: #00abf0;
+    border-radius: 13px;
+    z-index: -1;
+    transition: .5s;
+    
+}
+
+.entre-contato:hover::before{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.hero-social a {
+    position: relative;
+    display: inline-flex;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 35px;
+    text-decoration: none;
+    align-items: center;
+    color: #00abf0;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-social a:hover{
+    color: #081b29;
+}
+
+.hero-social a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.hero-social a:hover::before{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+footer{
+    text-align: center;
+    border-top: 1px solid #ededed;
 }
 
 
