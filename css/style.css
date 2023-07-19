@@ -5,9 +5,46 @@
     box-sizing: border-box;
 }
 
+:root{
+    --primary:rgb(2, 6, 23);
+    --secondary:#00abf0;
+}
+
 body{
-    background: #081b29;
+    background:var(--primary);
     color: #ededed;
+}
+
+h1{
+    margin-bottom: 16px;
+}
+
+h3{ 
+    color: #C4cad3;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    z-index: 2;
+}
+
+h2{ 
+    font-size: 50px;
+    font-weight: 700;
+    color: #00abf0;
+    margin-bottom: 16px;
+    
+}
+
+p{
+    color: #c4cad3;
+    font-size: 16px;
+    margin-bottom: 16px;
+
+}
+
+.txttitle{
+    text-align: center;
+    padding-bottom: 100px;
 }
 
 .container{
@@ -15,11 +52,12 @@ body{
     margin: 0 auto;
 }
 
+/* inicio header */
 header{ 
     padding: 10px 0;
     position: fixed;
     width: 100%;
-    background-color:#081b29;
+    background-color: var(--primary);
     backdrop-filter: blur(10px);
     z-index: 5;
 }
@@ -67,11 +105,21 @@ header .container{
     font-weight: bold;
 }
 
+/* fim header */
+
+/* inicio hero */
 .hero{
+    position: relative;
     display: flex;
     align-items: center;
-    height: 85vh;  
-    
+    height: 100vh;
+    background: rgb(2,6,23);
+    background: linear-gradient(180deg, rgba(2,6,23,1) 35%, rgba(5,13,47,1) 74%);   
+}
+
+.divisor{
+    position:absolute;
+    bottom: 0;
 }
 
 .hero .container{
@@ -83,17 +131,11 @@ header .container{
 .hero img{
     width: 625px;
     height: 360px;
-    /* animation: move 5500ms normal infinite; */
+    z-index: 2;
 }
 
-
-
-.principal{
-    
+.principal{    
     max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .principal h1{
@@ -108,66 +150,75 @@ header .container{
     font-weight: bold;
     font-size: 35px;
     color: #ededed;
+    margin-bottom: 70px;
 }
 
 .principal h3{
-    color: #C4C4C4;
+    color: #ededed;
     font-weight: bold;
     font-size: 28px;
-    margin-bottom: 65px;
-    display: block;
-      
-}
-
-.hero-social{
-    display: flex;
-    column-gap: 50px;
+    
 }
 
 
-.hero-social a {
+.btn{
     position: relative;
-    display: inline-flex;
-    width: 80px;
-    height: 80px;
-    background-color: transparent;
-    border: 2px solid #00abf0;
-    border-radius: 50%;
-    font-size: 35px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
     text-decoration: none;
-    align-items: center;
+    padding: 16px 32px; 
+    border: 2px solid #00abf0;
+    border-radius: 15px;
     color: #00abf0;
-    justify-content: center;
+    background-color: transparent;
     z-index: 1;
     overflow: hidden;
 }
 
-.hero-social a:hover{
-    color: #081b29;
+.btn:hover{
+    color:#081b29;
 }
 
-.hero-social a::before{
+.btn::before{
     content: '';
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
     width: 0;
-    height: 100%;
-    background:#00abf0;
+    background-color: #00abf0;
+    border-radius: 13px;
     z-index: -1;
     transition: .5s;
+    
 }
 
-.hero-social a:hover::before{
+.btn:hover::before{
     width: 100%;
     height: 100%;
     transition: .5s;
 }
 
+.btn svg{
+    margin-left: 8px;
+}
+
+
+.dotted-circle{
+    opacity: 0.3;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    animation: animate 30s linear infinite;
+}
+
+/* fim hero */
+
+/* inicio sobre mim */
 .sobremim{ 
+    padding: 112px 0;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
 }
 
 .sobremim h2{
@@ -177,34 +228,14 @@ header .container{
 .txtsobre{
     max-width: 660px;
 }
-
-h3{ 
-    color: #C4cad3;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    z-index: 2;
-}
-
-h2{ 
-    font-size: 40px;
-    font-weight: 700;
-    color: #00abf0;
-    margin-bottom: 16px;
-    
-}
-
-p{
-    color: #c4cad3;
-    font-size: 16px;
-    margin-bottom: 16px;
-
-}
+/* fim sobre mim */
 
 
-.txttitle{
-    text-align: center;
-    padding-bottom: 100px;
+
+/* inicio habilidades */
+
+.skills{
+    padding: 112px 0;
 }
 
 .itens{
@@ -214,7 +245,7 @@ p{
     column-gap: 200px;
     /* max-width: 800px; */
     flex-wrap: wrap;
-    padding-bottom: 100px;
+    
 }
 
 .itens h3{
@@ -331,7 +362,7 @@ p{
 .box span{
    position: absolute; 
    inset: 5px;
-   background: rgb(12, 11, 14);
+   background: rgb(16, 15, 19);
    border-radius: 20px;
    z-index: 1;
 }
@@ -350,6 +381,14 @@ p{
     }
     
 }
+/* fim habilidades */
+
+
+/* inicio projetos */
+
+.meus-projetos{
+    padding: 112px 0;
+}
 
 .caixa{
     display: flex;
@@ -357,7 +396,6 @@ p{
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-between;
-    padding-bottom: 200px;
 }
 
 .projetos{
@@ -365,7 +403,7 @@ p{
     width: 400px;
     height: 250px;
     overflow: hidden;
-    border: 3px solid rgb(12, 11, 14);
+    border: 3px solid rgb(39, 36, 36);
     border-radius: 10px;
     margin-bottom: 50px;
     text-decoration: none;
@@ -445,7 +483,10 @@ p{
 .icones img:hover{
     opacity: 0.5;
 }
+/* fim projetos */
 
+
+/* inicio contato */
 .contato .txttitle{
     text-align: left;
     padding-bottom: 10px;
@@ -455,6 +496,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 112px 0;
 }
 
 .contato p{
@@ -465,144 +507,63 @@ p{
     margin-bottom: 70px;
 }
 
-.entre-contato{
-    position: relative;
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    padding: 16px 32px; 
-    border: 2px solid #00abf0;
-    border-radius: 15px;
-    color: #00abf0;
-    background-color: transparent;
-    z-index: 1;
-    overflow: hidden;
-}
 
-.entre-contato:hover{
-    color:#081b29;
-}
+/* fim contato */
 
-.entre-contato::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    background-color: #00abf0;
-    border-radius: 13px;
-    z-index: -1;
-    transition: .5s;
-    
-}
-
-.entre-contato:hover::before{
-    width: 100%;
-    height: 100%;
-    transition: .5s;
-}
-
-.hero-social a {
-    position: relative;
-    display: inline-flex;
-    width: 80px;
-    height: 80px;
-    background-color: transparent;
-    border: 2px solid #00abf0;
-    border-radius: 50%;
-    font-size: 35px;
-    text-decoration: none;
-    align-items: center;
-    color: #00abf0;
-    justify-content: center;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.hero-social a:hover{
-    color: #081b29;
-}
-
-.hero-social a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background:#00abf0;
-    z-index: -1;
-    transition: .5s;
-}
-
-.hero-social a:hover::before{
-    width: 100%;
-    height: 100%;
-    transition: .5s;
-}
-
+/* inicio footer */
 footer{
     text-align: center;
     border-top: 1px solid #ededed;
+    padding: 25px;
 }
 
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
 
+.icons{
+    display: flex;
+    column-gap: 20px;
+}
 
-/* @keyframes blinkTextCursor {
-    from {
-      border-right-color: black;
-    }
-    to {
-      border-right-color: transparent;
-    }
-  } */
-/* .cursor{
-    display: block;
-    position: absolute;
-    height: 100%;
+.icons a{
+    text-decoration: none;
+    color: #a6abb4;
+}
+
+.icons a:hover{
+    color: #00abf0;
+    transition: .3s;
+}
+/* fim do footer */
+ 
+.socials{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    bottom: 0;
+    left: 45px;
+
+}
+
+.socials a {
+    text-decoration: none;
+    color: #a6abb4;
+}
+
+.socials a:hover {
+    color: #00abf0;
+    transition: .3s;
+}
+
+.barra{
+    margin-top: 10px;
     width: 2px;
-    /* Change colour of Cursor Here */
-    /* background-color: black;
-    z-index: 5;
-    animation: flash 0.5s none infinite alternate;
-  }
-  @keyframes flash{
-    0%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-    }
-  } */
- /* .cursor{
-    content: '|';
-    font-weight: bold;
-    font-size: 28px;
-    margin-left: 5px;
-    opacity:1;
-    animation: pisca .7s infinite;
-} 
-
-@keyframes pisca{
-    0%,100%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
+    height: 50px;
+    background-color: #ededed;
+    
 }
-
-
- .typing-animation{
-    animation: 900ms infinite normal, typing 3s steps(40) 0s normal;
-}
-
-@keyframes typing{
-    from{
-        width: 0;
-    }
-    to{
-        width:13em;
-    }
- }  */
