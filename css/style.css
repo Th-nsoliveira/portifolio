@@ -129,9 +129,31 @@ header .container{
 }
 
 .hero img{
-    width: 625px;
-    height: 360px;
+    width: 550px;
+    height: 550px;
+    animation: move 6s infinite linear;
     z-index: 2;
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0px);
+        transform: translateY(0px);
+    }
+    
+
+    50%{
+        transform: translateY(15px);
+        
+    }
+
+    
+
+    100%{
+        transform: translateX(0px);
+        transform: translateY(0px);
+    } 
+    
 }
 
 .principal{    
@@ -207,10 +229,12 @@ header .container{
 .dotted-circle{
     opacity: 0.3;
     position: absolute;
-    right: 200px;
-    top: 100px;
+    left: 50px;
+    top: 80px;
     animation: animate 30s linear infinite;
 }
+
+
 
 /* fim hero */
 
@@ -367,20 +391,7 @@ header .container{
    z-index: 1;
 }
 
-@keyframes move{
-    from{
-        transform: translateY(0px);
-        transform: translateX(10px);
-    }
-    50%{
-        transform: translateY(-10px);
-    }
 
-    to{
-        transform: translateX(10px);
-    }
-    
-}
 /* fim habilidades */
 
 
