@@ -1,18 +1,44 @@
- var bgimagem=document.querySelector('.bg-img')
- var proj= document.querySelectorAll('.projetos') //lista
+var btnshow=document.getElementById('btnshow');
 
+btnshow.addEventListener('click',function(){
 
- //console.log(proj);
+    var caixa=document.querySelector('.caixa');
+    caixa.classList.toggle('show');
 
- proj.forEach((item) => {
+    if(caixa.classList.contains('show')){
+        return btnshow.textContent="Ver menos"
+    }
+    else{
+        return btnshow.textContent="Ver mais"
+    }
     
-    item.addEventListener('mouseenter', function(){        
-        //console.log(item);
-        //item.classList.add('ativo');
-    })
-
- })
+});
 
 
 
+var backtop=document.querySelector('.backtop')
 
+window.addEventListener('scroll',function(){
+    if(window.scrollY>1000){
+        backtop.classList.add('dflex')
+    }
+    else{
+        backtop.classList.remove('dflex')
+    }
+});
+
+
+
+var btnMenu = document.querySelector(".btn-menu");
+
+var nave = document.querySelector(".nave")
+
+btnMenu.addEventListener('click', function(){
+    nave.classList.toggle('menu-open')
+    btnMenu.classList.toggle('x')
+})
+
+nave.addEventListener('click', function(){
+    nave.classList.remove('menu-open')
+    btnMenu.classList.toggle('x')
+})
