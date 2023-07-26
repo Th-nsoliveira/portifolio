@@ -10,6 +10,10 @@
     --secondary: #00abf0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     background-color: #040c2e;
@@ -20,9 +24,7 @@
     border-radius: 10px;
 }
 
-html{
-    scroll-behavior: smooth;
-}
+
 
 body {
     background-color: #020617;
