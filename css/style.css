@@ -104,8 +104,6 @@ header .container {
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s;
-    ;
-
 }
 
 .nave a:hover {
@@ -113,12 +111,16 @@ header .container {
 
 }
 
-.nave a:last-child {
+.nave a:nth-child(5){
     padding: 10px 10px;
     border-radius: 30px;
     background-color: #00abf0;
     color: #081b29;
     font-weight: bold;
+}
+
+.nave .icons{
+    display: none;
 }
 
 .btn-menu{
@@ -216,6 +218,7 @@ header .container {
     background-color: transparent;
     z-index: 1;
     overflow: hidden;
+    margin-top: 35px;
 }
 
 .btn:hover {
@@ -652,6 +655,7 @@ footer .container {
     border-radius: 5px;
     color: #ededed;
     background-color: #018dc5;
+    z-index: 15;
 }
 
 .dflex{
@@ -675,14 +679,46 @@ footer .container {
         display: flex;
         flex-direction: column;
         transform: translateX(100%);
+        align-items: center;    
         transition: 0.8s;
         height: 100vh;
         width: 100%;
-        background-color: #020617e1;
+        background-color: #020617f8;
         position: fixed;
         left: 0;
         top: 0;    
     }
+
+    .nave a{
+        margin-top: 70px;
+    }
+
+    .nave a:nth-child(5){
+        padding: 0 0;
+        margin-top: 70px;
+        border-radius: 0px;
+        background-color: transparent;
+        color: #ededed;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .nave a:hover {
+        color:#00abf0;
+        background-color: transparent;   
+    }
+
+    .nave .icons{
+        display: flex;
+        column-gap: 40px;
+    }
+
+    .nave .icons  a{
+        color: white;
+    }
+    
 
     .btn-menu{
         display: block;
@@ -701,7 +737,7 @@ footer .container {
     }
 
     .x .bar:first-child{
-        transform: rotate(45deg) translate(8px, 2px);
+        transform: rotate(45deg) translate(8px, 5px);
     }
 
     .x .bar:nth-child(2){
@@ -710,7 +746,7 @@ footer .container {
     }
 
     .x .bar:last-child{
-        transform: rotate(-45deg) translate(6px, 0);
+        transform: rotate(-45deg) translate(5px,-2px);
     }
 
 
@@ -757,6 +793,10 @@ footer .container {
         width: 200px;
     }
 
+    .txtsobre{
+        margin: 0 5px;
+    }
+
     .txtsobre h2{
         font-size: 35px;
     }
@@ -766,6 +806,9 @@ footer .container {
         margin-bottom: 8px;
     }
 
+    #sobre{
+        scroll-margin-top: 0px;
+    }
 
     h2{
         font-size: 25px;
@@ -774,6 +817,7 @@ footer .container {
 
     p{
         font-size: 16px;
+        
         margin-bottom: 8px;
     }
 
@@ -782,8 +826,14 @@ footer .container {
     }
 
     .box{
-        width: 200px;
+        width: 145px;
         padding: 25px  0;
+    }
+
+    .itens {
+        column-gap: 50px;
+        flex-wrap: wrap;
+    
     }
 
     .meus-projetos{
@@ -806,6 +856,10 @@ footer .container {
     .contato{
         flex-direction: column;
         padding-bottom: 50px;
+    }
+
+    .contact-box{
+        margin: 0 5px;
     }
 
     .contato img{
@@ -832,7 +886,9 @@ footer .container {
         height: 35px;
         bottom: 20px;
         right: 15px;
+        
     }
+
 
     
 }
