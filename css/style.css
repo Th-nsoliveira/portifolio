@@ -836,20 +836,9 @@ footer .container {
         padding: 25px  0;
     }
 
-     .box::before {
-        width: 195px;
-        height: 195px;     
-    }
-    
-    .box::after {
-        width:195px;
-        height: 195px;
-    } 
-
     .itens {
         column-gap: 50px;
         flex-wrap: wrap;
-    
     }
 
     .meus-projetos{
