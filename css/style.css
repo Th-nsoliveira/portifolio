@@ -336,6 +336,7 @@ header .container {
     height: 300px;
     background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
     animation: animate 4s linear infinite;
+    overflow: hidden;
 
 }
 
@@ -347,6 +348,7 @@ header .container {
     background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
     animation: animate 4s linear infinite;
     animation-delay: -2s;
+    overflow: hidden;
 }
 
 .one::before {
@@ -693,6 +695,10 @@ footer .container {
         margin-top: 70px;
     }
 
+    .nave:first-child{
+        margin-top: 15px;
+    }
+
     .nave a:nth-child(5){
         padding: 0 0;
         margin-top: 70px;
@@ -830,7 +836,7 @@ footer .container {
         padding: 25px  0;
     }
 
-    .box::before {
+    /* .box::before {
         width: 180px;
         height: 180px;     
     }
@@ -838,7 +844,7 @@ footer .container {
     .box::after {
         width:180px;
         height: 180px;
-    }
+    } */
 
     .itens {
         column-gap: 50px;
