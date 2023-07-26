@@ -297,7 +297,7 @@ header .container {
     column-gap: 200px;
     /* max-width: 800px; */
     flex-wrap: wrap;
-
+    overflow: hidden;
 }
 
 .itens h3 {
@@ -836,15 +836,15 @@ footer .container {
         padding: 25px  0;
     }
 
-    /* .box::before {
-        width: 180px;
-        height: 180px;     
+     .box::before {
+        width: 195px;
+        height: 195px;     
     }
     
     .box::after {
-        width:180px;
-        height: 180px;
-    } */
+        width:195px;
+        height: 195px;
+    } 
 
     .itens {
         column-gap: 50px;
