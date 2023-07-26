@@ -830,6 +830,16 @@ footer .container {
         padding: 25px  0;
     }
 
+    .box::before {
+        width: 180px;
+        height: 180px;     
+    }
+    
+    .box::after {
+        width:180px;
+        height: 180px;
+    }
+
     .itens {
         column-gap: 50px;
         flex-wrap: wrap;
