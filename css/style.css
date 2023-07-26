@@ -751,7 +751,7 @@ footer .container {
 
 
     .hero{
-        height: 75vh;
+        height: 100vh;
     }
 
     .principal h1 {        
@@ -862,10 +862,17 @@ footer .container {
         margin: 0 5px;
     }
 
+    .contact-box h2{
+        font-size: 32px;
+    }
+
+
     .contato img{
         display: none;
     }
     
+    
+
     footer .container{
         display: flex;
         justify-content: center;
