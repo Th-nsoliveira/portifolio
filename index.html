@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Portifólio - Thiago Nascimento</title>
 </head>
@@ -58,7 +59,7 @@
         <div class="container">
             <div class="principal">
 
-                <h3>Olá, eu sou</h3>
+                <h3  >Olá, eu sou</h3>
                 <h1>Thiago Nascimento</h1>
                 <h2 class="typedtext"><span class="auto-type"></span></h2>
                 <a href="#proj" class="btn">Conheça meu portifólio</a>
@@ -77,7 +78,7 @@
     </div>
 
 
-    <div class="sobremim container"  id="sobre">
+    <div class="sobremim container"  id="sobre" data-aos="fade-down" data-aos-duration="6 data-aos="zoom-in"00">
 
         <img src="img/astronaut img.png" alt="">
 
@@ -113,44 +114,42 @@
 
         <div class="itens">
 
-            <div class="box one">
+            <div class="box one" data-aos="zoom-in">
                 <span></span>
                 <img src="img/hmllogo.svg" alt="">
                 <h3>HTML 5</h3>
 
             </div>
-            <div class="box two">
+            <div class="box two" data-aos="zoom-in">
                 <span></span>
                 <img src="img/csslogo.svg" alt="">
                 <h3>CSS</h3>
 
             </div>
-            <div class="box three">
+            <div class="box three" data-aos="zoom-in">
                 <span></span>
                 <img src="img/jslogo.svg" alt="">
                 <h3>Java Script</h3>
 
             </div>
-            <div class="box four">
+            <div class="box four" data-aos="zoom-in">
                 <span></span>
                 <img src="img/bootstraplogo.svg" alt="">
                 <h3>Bootstrap</h3>
 
             </div>
-            <div class="box five">
+            <div class="box five" data-aos="zoom-in">
                 <span></span>
                 <img src="img/Sasslogo.svg" alt="">
                 <h3>Sass</h3>
 
             </div>
-            <div class="box six">
+            <div class="box six" data-aos="zoom-in">
                 <span></span>
                 <img src="img/figmalogo.svg" alt="">
                 <h3>Figma</h3>
 
             </div>
-
-            <!-- sass, css, html, js, my sql, bootstrap -->
 
         </div>
 
@@ -163,7 +162,7 @@
 
         <div class="caixa">
 
-            <a href="https://th-nsoliveira.github.io/projeto-gym/" target="_blank" class="projetos">
+            <a href="https://th-nsoliveira.github.io/projeto-gym/" target="_blank" class="projetos" data-aos="fade-right">
                 <span class="bg-img"><img src="img/academia.png" alt=""></span>
                 <div class="descricao">
                     <h3>Academia HardCore</h3>
@@ -177,7 +176,7 @@
                 </div>
             </a>
 
-            <a href="https://th-nsoliveira.github.io/project-odonto" target="_blank" class="projetos">
+            <a href="https://th-nsoliveira.github.io/project-odonto" target="_blank" class="projetos" data-aos="fade-right" data-aos-delay="100">
                 <span class="bg-img"><img src="img/odonto.png"></span>
                 <div class="descricao">
                     <h3>Odonto Rio</h3>
@@ -193,7 +192,7 @@
             </a>
 
 
-            <a href="https://th-nsoliveira.github.io/project-rustico/" target="_blank" class="projetos">
+            <a href="https://th-nsoliveira.github.io/project-rustico/" target="_blank" class="projetos" data-aos="fade-right" data-aos-delay="200">
                 <span class="bg-img"><img src="img/rustico.png"></span>
                 <div class="descricao">
                     <h3>Rustico</h3>
@@ -208,7 +207,7 @@
             </a>
 
 
-            <a href="https://th-nsoliveira.github.io/project-gas/" target="_blank" class="projetos">
+            <a href="https://th-nsoliveira.github.io/project-gas/" target="_blank" class="projetos" data-aos="fade-right" data-aos-delay="300">
                 <span class="bg-img"><img src="img/etanol.png"></span>
                 <div class="descricao">
                     <h3>Etanol x Gasolina</h3>
@@ -222,11 +221,11 @@
 
             </a>
 
-            <a href="" class="projetos">
+            <a href="" class="projetos" data-aos="fade-right" data-aos-delay="400">
                 <h2>Em desenvolvimento</h2>
             </a>
 
-            <a href="" class="projetos">
+            <a href="" class="projetos" data-aos="fade-right" data-aos-delay="500">
                 <h2>Em desenvolvimento</h2>
             </a>
 
@@ -308,6 +307,12 @@
 
 
     <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
